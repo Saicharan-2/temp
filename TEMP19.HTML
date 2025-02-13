@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:flex;
+            justify-content:center;
+        }
+        .box{
+            margin: 20px;
+            border: 2px solid  gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="msg"></div>
+    <script>
+        let products = [
+        {id:1,name:"product1",price:35,desc:"This is the description of the product",url:"https://picsum.photos/200/200",},
+        {id:2,name:"product2",price:324,desc:"This is the description of the product",url:"https://picsum.photos/200/200",},
+        {id:3,name:"product3",price:354,desc:"This is the description of the product",url:"https://picsum.photos/200/200",}
+        ];
+        //console.;og(products[0])
+        let length = products.length
+        let str="<div class='container'>"
+        for(let i =0;i<length;i++){
+            str += `<div class = 'box'>
+                <img src='${products[i].url}'>
+                <h2>${products[i].name}</h2>
+                <p2>${products[i].desc}</p2>
+                <h2>Price: ${products[i].price}</h2>
+                <button>ADD to cart</button>
+             </div>`   
+        }
+        msg.innerHTML=str;
+    </script>
+</body>
+</html>

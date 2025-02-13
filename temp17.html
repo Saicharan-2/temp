@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+     <script>
+    let user = [];
+        
+        function showData()
+        {
+        let a=document.getElementById("name").value;
+        let b=document.getElementById("email").value;
+        let c=document.getElementById("password").value;
+        let d=document.getElementById("date").value;
+       
+        user.push(a+" ");
+        user.push(b+" ");
+        user.push(c+" ");
+        user.push(d+" ");
+        user.push("<br>");
+
+        let str = "";
+        for(let i =0 ;i< user.length;i++)
+        {
+            str +=user[i];
+        }
+        msg.innerHTML = str;
+    }
+     
+     </script>
+<body>
+    <h1>Login Form</h1>
+    <p><input type="text" id ="name" placeholder="full name"></p>
+    <p><input type="text" id ="email" placeholder="Email Address"></p>
+    <p><input type="password" id ="password" placeholder="password"></p>
+    <p><input type="date" id ="date" placeholder="date"></p>
+    <button onclick="showData()">Log In</button>
+    <div id="msg"></div>
+</body>
+</html>
